@@ -1,0 +1,12 @@
+.idea/
+node_modules/
+tests-reports/unittests-results.xml
+Phantom*/*.*
+Phantom*/*/*.*
+.vscode/
+dist/
+*.zip
+*.crx
+*.pem
+
+yarn-error.*

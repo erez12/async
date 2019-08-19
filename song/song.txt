@@ -1,0 +1,21 @@
+Construct A Song:
+1. A song in our system is represented as an JSON array of verse where each vers has a url to get that vers and
+    part to know what is its location in the full song.
+    [{
+        url: '/path_to_part1',
+        part: 1
+    },{
+        url: '/path_to_part3',
+        part: 3
+    },{
+        url: '/path_to_part2',
+        part: 2
+    }...]
+2. Create a function getSong which gets a url to song JSON and callback. The function will call the callback with the joined
+    result of making requests to each vers.
+3. assume we have the following request method
+    function request(url, callback) {...}
+    This function will make a GET request and return response in the callback (assume all requests are successful :) )
+
+For example for the json in 1 we want to get
+    "${request('/path_to_part1')} ${request('/path_to_part2')} ${request('/path_to_part3')}"
