@@ -251,14 +251,16 @@ thunk(); // 25
 ```
 </br>
 Ok, what ?? why is this good ?
-Though this doesn't seem like much but what we created is a container which encapsulate specific
+Though this doesn't seem like much but what we created is a container which encapsulate
+specific
 state. When we call thunk over and over again it will popup out the same value.
-We now can pass our container around the program and any time we want its value we just invoke
-our thunk.
+We now can pass our container around the program and any time we want its value we just
+invoke our thunk.
 
-#####Async Thunk
+######Async Thunk
 
-This is where things become interesting. What is an async thunk - its same thing but we just need to pass in some callback to get out the underlining value.
+This is where things become interesting. What is an async thunk - its same thing but we just
+need to pass in some callback to get out the underlining value.
 ```javascript
 function asyncAdd(x, y, callback) {
     setTimeout(function (){
