@@ -175,7 +175,9 @@ function add1(x){
     return x + 1;
 }
 ```
-Our add1 function is good but it has 2 things backed into it - Addition (the operation) and the value 1 making it specific. Lets assume we now need to create a function which adds 2 to a number. We will need to create an additional function with same body but only use 2.
+Our add1 function is good but it has 2 things backed into it - Addition (the operation) and
+the value 1 making it specific. Lets assume we now need to create a function which adds 2 to
+a number. We will need to create an additional function with same body but only use 2.
 What we really want is to have some factory method which creates addition functions.
 
 ```javascript
@@ -276,7 +278,9 @@ thunk(function (sum) {
     console.log(sum); // 25
 })
 ```
-What's important to note here is that from the caller perspective, he doesn't know nor does he care how this value is calculated. This value can be fetched from the server or can be returned immediately. The caller just doesn't care.
+What's important to note here is that from the caller perspective, he doesn't know nor does
+he care how this value is calculated. This value can be fetched from the server or can be
+returned immediately. The caller just doesn't care.
 ```javascript
 // usersDAL.js
 let usersCache = null;
@@ -322,8 +326,8 @@ app.get('/birthdayOnHoliday/:userId', function (req, res) {
 });
 ```
 
-Important note here is that both getUsers and getHolidays are lazy. They don't do any work until we actually use
-them.
+Important note here is that both getUsers and getHolidays are lazy. They don't do any work
+until we actually use them.
 
 We can even create some utility to run multiple thunks
 ```javascript
